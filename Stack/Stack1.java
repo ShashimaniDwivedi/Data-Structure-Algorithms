@@ -18,8 +18,8 @@ class MyStack {
             return;
         }
 
-        top++;
-        arr[top] = temp;
+        
+        arr[++top] = temp;
 
         System.out.printf("%d added to Stack%n", arr[top]);
     }
@@ -32,8 +32,7 @@ class MyStack {
             return -1;
         }
 
-        int a = arr[top];
-        top--;
+        int a = arr[top--];
 
         return a;
     }
