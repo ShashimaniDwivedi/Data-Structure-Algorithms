@@ -39,7 +39,7 @@ class Impl extends ImpleAnimal {
 
 public class Abstract {
     public static void main(String[] args) {
-        // we cant create object of abstract class
+        // we can't create object of abstract class
         // we can create obj of that class which is implementing abstract class
         // Animal a=new Animal();// give error
         // ImpleAnimal ia=new ImpleAnimal();//give error
