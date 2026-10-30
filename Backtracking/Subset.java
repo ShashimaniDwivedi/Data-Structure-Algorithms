@@ -13,10 +13,12 @@ public class Subset {
             res.add(new ArrayList<>(tmp));
             return;
         }
-
+        // include 1 path
         tmp.add(nums[idx]);
+
         subset(nums, res, tmp, idx + 1);
 
+        // not include 2 path
         tmp.remove(tmp.size() - 1);
 
         subset(nums, res, tmp, idx + 1);
