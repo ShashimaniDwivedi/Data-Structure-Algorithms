@@ -1,5 +1,7 @@
 import java.util.*;
 
+//TC =O(2^n)
+//SC =O(n)Auxilarry
 public class Subset {
 
     public static void subset(int[] nums,
