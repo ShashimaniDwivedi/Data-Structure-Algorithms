@@ -30,13 +30,13 @@ public class Threesum {
 
         for (int i = 0; i < n; i++) {
 
-            Set<Integer> set = new HashSet<>();
+            HashMap<Integer, Integer> map = new HashMap<>();
 
             for (int j = i + 1; j < n; j++) {
 
                 int third = -(arr[i] + arr[j]);
 
-                if (set.contains(third)) {
+                if (map.containsKey(third)) {
 
                     List<Integer> triplet = Arrays.asList(
                             arr[i], arr[j], third);
@@ -45,7 +45,7 @@ public class Threesum {
                     result.add(triplet);
                 }
 
-                set.add(arr[j]);
+                map.put(arr[j], j);
             }
         }
 
