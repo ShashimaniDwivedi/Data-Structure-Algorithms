@@ -21,8 +21,8 @@ public class TwoSum1 {
 
     public static void main(String[] args) {
 
-        int target = 5;
-        int[] a = { 1, 2, 3, 5, 4 };
+        int target = 10;
+        int[] a = { 1, 3, 5, 7, 2, 6 };
 
         HashMap<Integer, Integer> map = new HashMap<>();
 
