@@ -20,7 +20,7 @@ public class CyclicSort {
     // }
     // }
     // }
-    // Modified Cyclic sort for out of range element
+
     public static void cyclicSort(int[] nums) {
 
         int i = 0;
