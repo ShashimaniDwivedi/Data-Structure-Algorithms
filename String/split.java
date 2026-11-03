@@ -17,6 +17,10 @@ class split {
             }
         }
 
+        if (!word.isEmpty()) {
+            list.add(word);
+        }
+
         System.out.println(list);
     }
 }
