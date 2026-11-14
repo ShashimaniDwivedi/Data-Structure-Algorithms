@@ -1,6 +1,7 @@
 
 import java.util.*;
 
+//Graph creation
 public class graph {
     public static void main(String[] args) {
         int n = 5;
