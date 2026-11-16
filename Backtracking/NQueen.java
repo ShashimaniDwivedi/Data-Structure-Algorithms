@@ -52,6 +52,7 @@ class NQueen {
             if (board[i][j] == 'Q')
                 return false;
         }
+
         return true;
     }
 
