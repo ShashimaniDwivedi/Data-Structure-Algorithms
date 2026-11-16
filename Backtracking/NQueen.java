@@ -11,6 +11,7 @@ class NQueen {
         }
 
         helper(0, board, ans, n);
+
         return ans;
     }
 
