@@ -1,6 +1,7 @@
 
 import java.util.*;
 
+//Fractional KnapSack
 class Item {
     int weight;
     int value;
@@ -30,11 +31,7 @@ class Solution {
                 W -= arr[i].weight;
 
             } else {
-
-                double fraction = (double) W / arr[i].weight;
-
-                totalProfit += arr[i].value * fraction;
-
+                totalProfit += (arr[i].value / arr[i].weight) * (double) W;
                 break;
             }
         }
