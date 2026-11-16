@@ -9,6 +9,7 @@ class NQueen {
         for (int i = 0; i < n; i++) {
             Arrays.fill(board[i], '.');
         }
+
         helper(0, board, ans, n);
         return ans;
     }
