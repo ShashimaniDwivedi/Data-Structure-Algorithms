@@ -34,16 +34,19 @@ class NQueen {
     }
 
     public static boolean isSafe(int row, int col, char[][] board, int n) {
+
         // same row left
         for (int j = 0; j < col; j++) {
             if (board[row][j] == 'Q')
                 return false;
         }
+
         // upper left
         for (int i = row - 1, j = col - 1; i >= 0 && j >= 0; i--, j--) {
             if (board[i][j] == 'Q')
                 return false;
         }
+
         // lower left
         for (int i = row + 1, j = col - 1; i < n && j >= 0; i++, j--) {
             if (board[i][j] == 'Q')
