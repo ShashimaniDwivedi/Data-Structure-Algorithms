@@ -1,5 +1,6 @@
 import java.util.*;
 
+//N Queen Problem
 class NQueen {
     public static List<List<String>> solveNQueen(int n) {
         List<List<String>> ans = new ArrayList<>();
