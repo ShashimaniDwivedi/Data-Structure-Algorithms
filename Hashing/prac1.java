@@ -30,7 +30,7 @@ public class prac1 {
 } */
 
 //Hashing
-/* public class prac1 {
+public class prac1 {
 
     public static int max(int[] arr) {
         int MAX = 0;
@@ -42,6 +42,21 @@ public class prac1 {
         }
 
         return MAX;
+    }
+    public static int sec_max(int[] arr) {
+        int MAX = 0,sec=-1;
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > MAX) {
+                sec=MAX;
+                MAX = arr[i];
+            }
+            else if(arr[i]>sec && arr[i]<MAX){
+                sec=arr[i];
+            }
+        }
+
+        return sec;
     }
 
     // hash largest size can be 10^7 for int and 10^8 for boolean
@@ -59,29 +74,36 @@ public class prac1 {
         }
 
         for (int i = 0; i < Hash.length; i++) {
-            if (Hash[i] > 0) {
-                System.out.printf("%d appear %d Times%n", i, Hash[i]);
-            }
+        if (Hash[i] > 0) {
+        System.out.printf("%d appear %d Times%n", i, Hash[i]);
         }
-    }
-} */
-
-//Character Hashing
-
-public class prac1{
-    public static void main(String[] args) {
-        char[]arr={'a','b','a','d','e','b','a','c'};
-        int[]hash=new int[26]; //because Z{122} character are there
-        //for all character upper and lower (256)
-        for (int i = 0; i < arr.length; i++) {
-            //reduced to 26
-            hash[arr[i]-'a']++;
         }
-        for (int i = 0; i < hash.length; i++) {
-            if (hash[i] > 0) {
-                System.out.printf("%c appear %d Times%n", i+'a', hash[i]);
-            }
-        }
-        System.out.println((int)0);
+        int ans = 0;
+        ans = max(Hash);
+        System.out.printf("Maximum frequency is %d \n", ans);
+        ans = sec_max(Hash);
+        System.out.printf("Second Maximum frequency is %d \n", ans);
     }
 }
+
+// Character Hashing
+
+/*
+ * public class prac1{
+ * public static void main(String[] args) {
+ * char[]arr={'a','b','a','d','e','b','a','c'};
+ * int[]hash=new int[26]; //because Z{122} character are there
+ * //for all character upper and lower (256)
+ * for (int i = 0; i < arr.length; i++) {
+ * //reduced to 26
+ * hash[arr[i]-'a']++;
+ * }
+ * for (int i = 0; i < hash.length; i++) {
+ * if (hash[i] > 0) {
+ * System.out.printf("%c appear %d Times%n", i+'a', hash[i]);
+ * }
+ * }
+ * 
+ * }
+ * }
+ */
